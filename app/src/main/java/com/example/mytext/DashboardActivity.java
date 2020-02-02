@@ -11,8 +11,8 @@ import java.util.concurrent.atomic.AtomicReferenceArray;
 
 public class DashboardActivity extends AppCompatActivity {
 
-    Button btnArithmetic,btnArea;
-int a;
+    Button btnArithmetic,btnArea,btnSI;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +20,7 @@ int a;
 
         btnArea = findViewById(R.id.btnArea);
         btnArithmetic = findViewById(R.id.btnArithemtic);
+        btnSI=findViewById(R.id.btnSI);
 
         btnArea.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +34,14 @@ int a;
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(DashboardActivity.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnSI.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(DashboardActivity.this,SimpleInterestActivity.class);
                 startActivity(intent);
             }
         });
