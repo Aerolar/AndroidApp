@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicReferenceArray;
 public class DashboardActivity extends AppCompatActivity {
 
     Button btnArithmetic,btnArea;
-
+int a;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
