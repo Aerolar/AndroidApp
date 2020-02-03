@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ArmstrongActivity"></activity>
+        <activity android:name=".SwapActivity"></activity>
+        <activity android:name=".ReverseActivity" />
+        <activity android:name=".PrimeActivity" />
+        <activity android:name=".OddEvenActivity" />
+        <activity android:name=".AutomorphicActivity" />
+        <activity android:name=".ArmstrongActivity" />
         <activity android:name=".DashboardActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +24,7 @@
         </activity>
         <activity android:name=".AreaCircleActivity" />
         <activity android:name=".SimpleInterestActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
