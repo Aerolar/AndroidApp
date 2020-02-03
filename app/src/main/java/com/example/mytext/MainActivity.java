@@ -62,6 +62,16 @@ public class MainActivity extends AppCompatActivity {
         btnDifference.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if(TextUtils.isEmpty(etFirst.getText())){
+                    etFirst.setError("Enter a value");
+                    etFirst.requestFocus();
+                    return;
+                }else if(TextUtils.isEmpty(etSecond.getText())) {
+                    etSecond.setError("Enter a value");
+                    etSecond.requestFocus();
+                    return;
+                }
                 int first, second,result;
                 first=Integer.parseInt(etFirst.getText().toString());
                 second=Integer.parseInt(etSecond.getText().toString());
@@ -77,6 +87,15 @@ public class MainActivity extends AppCompatActivity {
         btnMultiply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(TextUtils.isEmpty(etFirst.getText())){
+                    etFirst.setError("Enter a value");
+                    etFirst.requestFocus();
+                    return;
+                }else if(TextUtils.isEmpty(etSecond.getText())) {
+                    etSecond.setError("Enter a value");
+                    etSecond.requestFocus();
+                    return;
+                }
                 int first, second, result;
                 first=Integer.parseInt(etFirst.getText().toString());
                 second=Integer.parseInt(etSecond.getText().toString());
@@ -84,12 +103,23 @@ public class MainActivity extends AppCompatActivity {
                 result=first * second;
 
                 tvOutput.setText(result+"");
+
+                Toast.makeText(MainActivity.this, "Product is "+result, Toast.LENGTH_SHORT).show();
             }
         });
 
         btnDivide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(TextUtils.isEmpty(etFirst.getText())){
+                    etFirst.setError("Enter a value");
+                    etFirst.requestFocus();
+                    return;
+                }else if(TextUtils.isEmpty(etSecond.getText())) {
+                    etSecond.setError("Enter a value");
+                    etSecond.requestFocus();
+                    return;
+                }
                 int first, second, result;
                 first=Integer.parseInt(etFirst.getText().toString());
                 second=Integer.parseInt(etSecond.getText().toString());
@@ -97,6 +127,8 @@ public class MainActivity extends AppCompatActivity {
                 result=first / second;
 
                 tvOutput.setText(result+"");
+
+                Toast.makeText(MainActivity.this, "Quotient is "+result, Toast.LENGTH_SHORT).show();
 
             }
         });
